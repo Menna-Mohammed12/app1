@@ -1,0 +1,36 @@
+<section>
+    <div class="container mt-5 pt-5">
+        <div class="contactUS mt-4 text-center mb-5">
+            <h2 class="frame ">PORTFOLIO COMPONENT</h2>
+            <div class="lineicon  ">
+                <div class="line text-center "></div>
+                <div class="icon"><i class="fa-solid fa-star"></i></div>
+                <div class="line text-center "></div>
+            </div>
+        </div>
+
+        <div class="row mt-2 mb-5 gy-4">
+            @for (srcimg of imgSrc; track $index) {
+            <div class="col-md-4">
+                <div class="immmg position-relative overflow-hidden">
+                    <img [src]="srcimg" class="w-100 rounded-3" alt="">
+                    <div
+                    (click)="flag = false; modelImg=srcimg"
+                        class="layer rounded-3  position-absolute start-0 top-0 d-flex justify-content-center align-items-center w-100 h-100">
+                        <i class="fa-solid fa-plus fa-6x text-white"></i>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+
+
+
+<div 
+(click)="hideModel($event.target,img)"
+[class.d-none]="flag"
+class="model position-fixed mt-5 start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center bg-primary bg-opacity-25 ">
+<img #img [src]="modelImg" alt="" class="rounded-3" width="500">
+</div>

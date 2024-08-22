@@ -1,0 +1,28 @@
+
+.body{
+    background-color:#1ABC9C ;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.frame{
+    font-size: 40px;
+    font-weight: 700;
+
+}
+
+.lineicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    background-color:#fff ;
+    width: 80px;
+    height: 4px;
+}
+.icon{
+    padding: 0 10px;
+    color:#fff;
+}
